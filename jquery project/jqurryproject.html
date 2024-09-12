@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy website</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- internal css  -->
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .maindiv{
+            display: flex;
+        }
+        .childdiv{
+            width: 20%;
+            height: 150%;
+            border: 1px solid black;
+            position: fixed;
+            display: block;
+        }
+        .childdiv1{
+            width: 80%;
+            height: 100vh;
+            margin-left:20%;
+        }
+        h1{
+            text-align: center;
+            font-size: 40px;
+        }
+        .col1{
+            height: 500px;
+            background-color: rgb(160, 95, 138);
+            align-items: center;
+        }
+        .col2{
+            height: 500px;
+            background-color: rgb(255, 196, 196);
+        }
+        .col3{
+            height: 500px;
+            background-color: rgb(251, 255, 0);
+        }
+        .subdiv{
+            border: 2px solid blueviolet;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            width: 50%;
+            /* text-align: center; */
+            margin: auto;
+            margin-top: 100px;
+        
+        }
+        .p1{
+            background-color: black;
+            color: white;
+        
+        }
+        .p2{
+            background-color: black;
+            color: pink;
+        
+        }
+        .p3{
+            background-color: black;
+            color: yellow;
+        
+        }
+        .p4{
+            background-color: black;
+            color: cadetblue;
+        
+        }
+        
+</style>
+
+</head>
+<body>
+    <div class="maindiv">
+        <div class="childdiv">
+            <h1>DARK MODE</h1>
+            <div class="subdiv">
+                <button class="btnFadeIn">Dark Mode #1</button>
+                   <p class="p1">This Mode has black background and white color</p>
+                <button class="btnFadeIn1">Dark Mode #2</button>
+                   <p class="p2">This Mode has black background and pink color</p>
+                <button class="btnFadeIn2">Dark Mode #3</button>
+                   <p class="p3">This Mode has balck background and yellow color</p>
+                <button class="btnFadeIn3">Dark Mode #4</button>
+                   <p class="p4">This Mode has balck background and cadetblue color</p>
+
+            </div>
+        </div>
+        <div class="childdiv1">
+            <div class="col1">
+                <h1>Section 1</h1>
+            </div>
+            <div class="col2">
+                <h1>Section 2</h1>
+            </div>
+            <div class="col3">
+                <h1>Section 3</h1>
+            </div>
+        </div>
+    </div>
+
+    
+
+
+
+
+
+
+
+    <!-- jQuery CDN  -->
+
+<script
+src="https://code.jquery.com/jquery-3.7.1.min.js"
+integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+crossorigin="anonymous"
+></script>
+
+ <!-- CSS script  -->
+  <script>
+     $("body").css({backgroundColor: "white", color:"black"})
+  </script>
+
+  <!-- jQuery script  -->
+  <script>
+    $(document).ready(function () {
+
+
+        $(".btnFadeIn").click(function () {
+                $(".p1").fadeOut(1000);
+                $("body").css({backgroundColor: "black" ,color:"white"})
+                $(".col1,.col2,.col3").css({backgroundColor: "black" ,color:"white"})
+            })
+        $(".btnFadeIn1").click(function () {
+                $(".p2").fadeToggle(1000);
+                $("body").css({backgroundColor: "black" ,color:"pink"})
+                $(".col1,.col2,.col3").css({backgroundColor: "black" ,color:"pink"})
+            })
+        $(".btnFadeIn2").click(function () {
+                $(".p3").fadeToggle(1000);
+                $("body").css({backgroundColor: "black" ,color:"yellow"})
+                $(".col1,.col2,.col3").css({backgroundColor: "black" ,color:"yellow"})
+            })    
+        $(".btnFadeIn3").click(function () {
+                $(".p4").fadeToggle(1000);
+                $("body").css({backgroundColor: "black" ,color:"cadetblue"})
+                $(".col1,.col2,.col3").css({backgroundColor: "black" ,color:"cadetbule"})
+            })    
+
+
+                
+        
+    })
+  </script>
+</body>
+</html>
